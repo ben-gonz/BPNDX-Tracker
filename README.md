@@ -6,4 +6,8 @@ This program scrapes StockCharts.com for the daily $BPNDX, and sends me an email
 
 I chose to use ZohoMail, an open-source email option after some issues with Gmail and Yahoo.
 
+EventBridge (schedule) ──> Lambda: StartInstances ──> EC2 instance
+                                                   └─(cron)--> bpndx_tracker.py --> Zoho SMTP
+EventBridge (schedule) ──> Lambda: StopInstances ──┘
+
 ![Buy Signal](https://github.com/user-attachments/assets/21515c0a-bc69-4d98-b087-deda9c23ed43)
