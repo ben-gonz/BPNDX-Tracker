@@ -53,7 +53,7 @@ def lambda_handler(event=None, context=None):
             price = float(price_str)
             print(f"Current BPNDX: {price}")
             
-            if price <= 47.00:
+            if price <= 20.00:
                 # Load from environment variables
                 sender_email = os.environ.get('SENDER_EMAIL')
                 receiver_email = os.environ.get('RECEIVER_EMAIL')
