@@ -6,7 +6,7 @@ This program scrapes **StockCharts.com** for the daily $BPNDX, and sends me an e
 
 I chose to use **ZohoMail**, an open-source email option after some issues with Gmail and Yahoo.
 
-#### How it Runs on AWS
+### How it Runs on AWS
 The script is deployed on an EC2 instance, which is only powered on during the scheduled run window. To minimize cost and automate execution, the workflow is set up:
 EventBridge (schedule) ──> Lambda: StartInstances ──> EC2 instance
                                                    └─(cron)--> bpndx_tracker.py --> Zoho SMTP
