@@ -8,9 +8,10 @@ I chose to use **ZohoMail**, an open-source email option after some issues with 
 
 ### How it Runs on AWS
 The script is deployed on an EC2 instance, which is only powered on during the scheduled run window. To minimize cost and automate execution, the workflow is set up:
+
 EventBridge (schedule) ──> Lambda: StartInstances ──> EC2 instance
-                                                   └─(cron)--> bpndx_tracker.py --> Zoho SMTP
-EventBridge (schedule) ──> Lambda: StopInstances ──┘
+                                                          └─(cron)--> bpndx_tracker.py --> Zoho SMTP
+                                            EventBridge (schedule) ──> Lambda: StopInstances ──┘
 
 - EventBridge (CloudWatch Scheduler): Triggers start/stop at specific time of day
 - Lambda (StartInstances/StopInstances): Powers the EC2 instance on and off
