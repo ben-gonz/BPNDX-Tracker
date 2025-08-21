@@ -6,4 +6,4 @@ This program scrapes StockCharts.com for the daily $BPNDX, and sends me an email
 
 I chose to use ZohoMail, an open-source email option after some issues with Gmail and Yahoo.
 
-![Buy Signal](ben-gonz/BPNDX-Tracker/buysignal.png)
+![Buy Signal](https://drive.google.com/file/d/1D5k-MTVK5hqOuCbzQ7FwWlfE64zGo8AN/view?usp=sharing)
