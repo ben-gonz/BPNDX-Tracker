@@ -1,0 +1,20 @@
+# I used Python 3.11 to create the Lambda function
+# Make sure to create an IAM profile with full EC2 access for your function in the console
+
+import os, boto3
+EC2 = boto3.client("ec2")
+INSTANCE_ID = os.environ["INSTANCE_ID"] # Don't change this code, just add your instance id under Lambda > Configuration > Environment Variables (where Key = INSTANCE_ID and Value = i-XXXXXXXXXXXXXXXXX)
+
+# May have to increase Lambda Timeout from default 3s to 10s for less errors
+# You can test that your function is working under Test > put this into the JSON box: {"action":"start"}
+
+def lambda_handler(event, context):
+    action = (event or {}).get("action", "").lower()
+    if action == "start":
+        EC2.start_instances(InstanceIds=[INSTANCE_ID])
+        EC2.get_waiter("instance_running").wait(InstanceIds=[INSTANCE_ID])
+        return {"ok": True, "did": "start"}
+    if action == "stop":
+        EC2.stop_instances(InstanceIds=[INSTANCE_ID])
+        return {"ok": True, "did": "stop"}
+    return {"ok": False, "hint": "send {'action':'start'} or {'action':'stop'}"}
