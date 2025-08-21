@@ -4,3 +4,4 @@ The BPI is a technical indicator that measures the percentage of stocks within a
 
 This program scrapes StockCharts.com for the daily $BPNDX, and sends me an email if it drops into my buy signal range.
 
+I chose to use ZohoMail, an open-source email option after some issues with Gmail and Yahoo.
