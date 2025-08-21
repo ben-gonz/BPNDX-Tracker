@@ -19,3 +19,4 @@ EventBridge (schedule) ──> Lambda: StopInstances ──┘
 - Zoho SMTP: Handles outgoing email delivery
 
 ![Buy Signal](https://github.com/user-attachments/assets/21515c0a-bc69-4d98-b087-deda9c23ed43)
+![Email](https://github.com/user-attachments/assets/fe2bfdf1-75fe-485d-99bc-0b3ef9963e36)
