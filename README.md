@@ -10,7 +10,7 @@ I chose to use **ZohoMail**, an open-source email option after some issues with 
 
 ```text
 EventBridge (schedule) ──> Lambda: StartInstances ──> EC2 instance
-                                                   └─(cron)--> bpndx_tracker.py --> Zoho SMTP
+                                                   └─(cron)--> bpndx_scrape_and_email.py --> Zoho SMTP
 EventBridge (schedule) ──> Lambda: StopInstances ──┘
 ```
 - EventBridge (CloudWatch Scheduler): Triggers start/stop at specific time of day
