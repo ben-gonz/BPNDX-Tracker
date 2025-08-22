@@ -18,7 +18,4 @@ EventBridge (schedule) ──> Lambda: StopInstances ──┘
 - EC2 instance: Runs a cron job that executes bpndx_scrape_and_email.py
 - Zoho SMTP: Handles outgoing email delivery
 
-![Buy Signal](https://github.com/user-attachments/assets/21515c0a-bc69-4d98-b087-deda9c23ed43)
-
-
-![Email](https://github.com/user-attachments/assets/0975abcd-a6b1-441f-a88e-7e270cc56896)
+![Buy Signal](https://github.com/user-attachments/assets/305d0f7e-d8cc-4d9b-bf10-aa3fc0856b36)
