@@ -1,5 +1,5 @@
 # $BPNDX-Tracker
-#### (How I save $222 every year)
+*(How I put $222 in my pocket every year)*
 
 I wanted to invest in index funds without the headache of constantly checking charts or paying for a $20 subscription to typical tracking websites. I built this app to notify me when it’s time to buy, and the best part is it only costs about $1.50 a month on a t2.micro to run. That's $200+ I can put back into investments.
 
